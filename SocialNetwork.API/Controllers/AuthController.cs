@@ -16,11 +16,11 @@ namespace SocialNetwork.API.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] Login model)
+        public async Task<IActionResult> Login([FromBody] Login model)
         {
-            var user = authService.Authenticate(model.Email, model.Password);
+            var user = await authService.AuthenticateAsync(model.Email, model.Password);
 
-            if (user == null)
+            if (user == null )
             {
                 return Unauthorized("Tentativa de login inválida.");
             }

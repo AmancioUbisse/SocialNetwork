@@ -3348,11 +3348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\SocialNetwork\\SocialNetwork.API\\SocialNetwork.API.csproj",
+      "projectUniqueName": "D:\\SocialNetwork\\SocialNetwork.API\\SocialNetwork.API.csproj",
       "projectName": "SocialNetwork.API",
-      "projectPath": "D:\\Projects\\SocialNetwork\\SocialNetwork.API\\SocialNetwork.API.csproj",
+      "projectPath": "D:\\SocialNetwork\\SocialNetwork.API\\SocialNetwork.API.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\SocialNetwork\\SocialNetwork.API\\obj\\",
+      "outputPath": "D:\\SocialNetwork\\SocialNetwork.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

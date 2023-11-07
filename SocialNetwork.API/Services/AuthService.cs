@@ -1,27 +1,34 @@
-﻿using SocialNetwork.API.Models.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using SocialNetwork.API.Data;
+using SocialNetwork.API.Models.Domain;
 using SocialNetwork.API.Services.Interfaces;
 
 namespace SocialNetwork.API.Services
 {
     public class AuthService : IAuthService
     {
-        private List<Registration> users; // Simula uma lista de usuários registrados
+       private readonly SocialNetworkDbContext dataContext;
 
-        public AuthService()
+        public AuthService(SocialNetworkDbContext dataContext)
         {
-            // Inicialize a lista de usuários (substitua por sua lógica de persistência)
-            users = new List<Registration>
-        {
-            new Registration {  Name = "Amancio", Email = "amancioubissejrr@gmail.com", Password = "testando", PhoneNo = "848122283" },
-        };
+            this.dataContext = dataContext;
         }
 
-        public Registration Authenticate(string email, string password)
+        public async Task<List<Registration>> ListarAsync()
         {
-            var user = users.SingleOrDefault(u => u.Email == email && u.Password == password);
+            //Recupera todos os registros da tabela "Registration" da base de dados de forma assicrona
+            return await dataContext.Registration.ToListAsync();
+        }
+
+        public async Task<Registration> AuthenticateAsync(string email, string password)
+        {
+            // Verifica se existe um usuário com o email e senha fornecidos
+            var user = await dataContext.Registration.FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
 
             return user;
         }
     }
 
 }
+
+

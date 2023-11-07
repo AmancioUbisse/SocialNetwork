@@ -4,6 +4,6 @@ namespace SocialNetwork.API.Services.Interfaces
 {
     public interface IAuthService
     {
-        Registration Authenticate(string email, string password);
+        Task<Registration> AuthenticateAsync(string email, string password);
     }
 }

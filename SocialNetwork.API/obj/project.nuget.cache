@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oxwRWgIxYlrQ8HkhKzXOB3v+IGTHjQx0v36UdCBS8hQiLpqpaAAdBwrvdJGoGo55evRSxyHhXPq1pthX+1uVUw==",
+  "dgSpecHash": "H108wG7Gv8+Z5zMKt5PR1qjH0shOZFsqrxNzY3V8fGzU5N1XlqNZl8cgCeN66w4RJBdKtSIP5/UgQU5nKA94DA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\SocialNetwork\\SocialNetwork.API\\SocialNetwork.API.csproj",
+  "projectFilePath": "D:\\SocialNetwork\\SocialNetwork.API\\SocialNetwork.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
